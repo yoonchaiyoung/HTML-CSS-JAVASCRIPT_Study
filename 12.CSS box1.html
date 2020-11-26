@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS box 공부1</title>
+    <style>
+        #default-div{
+            background-color:yellowgreen;
+            width:600px;
+            height:50px;
+            overflow-y: scroll;
+        }
+        /*
+        BLOCK Tag 는 width, height 태그O > 한 줄 통째로 차지하므로
+        Inline Tag 는 width, height 태그X > 콘텐츠 길이만큼만 차지하므로
+        */
+
+        span{
+            background-color:teal;
+        }
+
+        #box1{
+            background-color: red;
+            width:100px;
+            height:100px;
+        }
+        
+        #box2{
+            background-color: orange;
+            width:100px;
+            height:100px;
+        }
+
+        #box3{
+            background-color: yellow;
+            width:100px;
+            height:100px;
+        }
+        
+        #box4{
+            background-color: greenyellow;
+            width:100px;
+            height:100px;
+        }
+        
+        #box5{
+            background-color: green;
+            width:100px;
+            height:100px;
+        }
+
+        #box6{
+            background-color: skyblue;
+            width:100px;
+            height:100px;
+        }
+
+        #box7{
+            background-color: blue;
+            width:100px;
+            height:100px;
+        }
+        
+        #box8{
+            background-color:purple;
+            width:100px;
+            height:100px;
+        }
+
+        #box9{
+            background-color:brown;
+            width:100px;
+            height:100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="default-div">
+        div는 기본적으로 BLOCK Tag. 한 줄을 통째로 차지한다.<br/>
+        BLOCK Tag, Inline Tag 둘 다 포함 가능하다.<br/>
+        자동으로 앞뒤 줄바꿈이 된다.<br/>
+        ex) h1~h6(글씨 크기), p(문단), ul(● 목록), ol(1. 2. 3. 목록)
+    </div>
+
+    <span id="dafault-span">
+        span은 기본적으로 Inline Tag. 콘텐츠 길이만큼 차지한다.<br/>
+        Inline Tag는 반드시 BLOCK Tag 안에 들어가 있어야 하고, BLOCK Tag를 담을 수 없다.<br/>
+        줄바꿈이 되지 않는다.<br/>
+        ex) img(이미지), input(텍스트 입력, 제출 버튼, 체크 박스 등등), a(링크)
+    </span>
+    
+
+    <div id="second-div">
+        <div id="box1">
+            1
+        </div>
+        <div id="box2">
+            2
+        </div>
+        <div id="box3">
+            3
+        </div>
+        <div id="box4">
+            4
+        </div>
+        <div id="box5">
+            5
+        </div>
+        <div id="box6">
+            6
+        </div>
+        <div id="box7">
+            7
+        </div>
+        <div id="box8">
+            8
+        </div>
+        <div id="box9">
+            9
+        </div>
+    </div>
+</body>
+</html>

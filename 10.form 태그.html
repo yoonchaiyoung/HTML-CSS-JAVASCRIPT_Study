@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 태그 공부</title>
+</head>
+<body>
+    <form name="input" action="" method="get">
+        <p>
+            <span>action : 데이터가 전송될 스크립트 파일 지정</span><br/>
+            <span>method : 데이터 전송 방식(get/post)</span><br/>
+        </p>
+        <p>
+            이름을 입력하세요 : <input type="text" name="name"><br/>
+            비밀번호를 입력하세요 : <input type="password" name="password"/><br/>
+            <span>설명 : type="password"로 지정하면 입력한 값이 보이지 않게 암호화되서 보인다.</span>    
+        </p>
+        
+    </form>
+    
+    <form>
+        <input type="submit" value="클릭해봥" onclick="alert('짜잔~~')" />
+    </form>
+</body>
+</html>

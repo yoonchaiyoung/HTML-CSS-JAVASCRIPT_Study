@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자 공부</title>
+    <style>
+        /* 태그이름 : 태그 선택자
+            태그 하나만 선택해서 CSS 효과를 줘보자. \
+        */
+        h1{
+            background-color:yellow;
+            color:red;
+        }
+        
+        /* # : id 선택자 ; id는 한 문서 내에서 고유한 값 ; 1개만 스타일 지정
+           . : class 선택자 ; class는 한 문서 내에서 중복 가능 ; 그룹으로 묶어서 스타일 지정
+        */
+        #lunch-menu{
+            color:dodgerblue;
+        }
+        
+        .menu{
+            font-style:oblique;
+        }
+        /* > : 자식 선택자 ; DOM 구조에서 봤을 때 바로 밑에 있는 자식들 선택
+        */
+        ul > span {
+            background-color:rosybrown;
+        }
+        /*  (빈칸 한 칸) : 후손 선택자 ; DOM 구조에서 봤을 때 아래에 있는 모든 것들(밑, 밑의 밑, 밑의 밑의 밑...)
+        */
+        #menu-list *{  /* * : 모든 것 선택 */
+            background-color:gold;
+        }
+        
+        /* [속성명] : 태그의 속성 선택자
+        */
+        [href]{
+            color:olivedrab;
+        }
+        /* [속성명=속성값] : 태그의 속성 매칭 선택자
+        */
+        [type="password"]{
+            background-color:olive;
+        }
+        
+        /* ~ : 뒤에 있는 모든 동생들 선택
+        */
+        .menu ~ ul{
+            text-decoration-line:line-through;
+        }
+        /* + : 바로 뒤에 있는 동생 1개만 선택 ; 조건에 맞지 않으면 아무 변화 없음
+        */
+        img + [type="checkbox"]{
+            width: 300px;
+            height: 300px;
+        }  /* img 바로 뒤의 동생이 span 이라서 조건에 맞지 않아서 아무 변화 없음 */
+        
+        /* input 속성 선택자
+        */
+        input:read-only{
+            color:orchid;
+        }
+        
+        /* 마우스가 위로 올라갔을 때
+        */
+        h1:hover{
+            background-color:black;
+        }
+
+        /* 방문하지 않은 링크 선택
+        */
+        a:link{
+            text-decoration-line:underline;
+        }
+        /* 방문한 링크 선택
+        */
+        a:visited{
+            text-decoration-line:inherit;
+        }
+        
+        /* ???번째 요소 선택
+        */
+        *:nth-child(3n){
+            font-size:10px;
+        }
+
+        /* first-child : 1번째 자식
+            last-child : 마지막 자식
+        */
+        form *:first-child{
+            font-style:italic;
+        }
+        input:checked{
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <span id="first-span">첫 번째 글씨</span><br/>
+        <span id="second-span">두 번째 글씨</span><br/>
+        <h1 id="big-title">큰 글씨 제목</h1>
+        <h3 id="lunch-menu">점심 메뉴</h3>
+        <span>순서가 중요하지 않으니까 ul 태그 사용</span><br/>
+        <ul id="menu-list">
+            <span>메뉴 리스트를 나열해보자.</span><br/>
+            <li class="menu">탕수육</li>
+            <li class="menu">칼국수</li>
+            <li class="menu">보쌈</li>
+                <ul>
+                    <li>항아리 보쌈</li>
+                    <li>원할머니 보쌈</li>
+                </ul>
+            <li class="menu">치킨</li>
+            <li class="menu"><a href="https://www.google.com/search?q=%EC%82%BC%EA%B3%84%ED%83%95&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjS0Iaj-p_tAhUVzmEKHRSZDi0Q_AUoAXoECAQQAw&cshid=1606384975036040&biw=796&bih=289">삼계탕</a></li>
+        </ul>
+        <span>설명 : 삼계탕 글씨를 클릭하면 구글 삼계탕 이미지 검색링크로 이동합니다.</span><br/>
+        <img src="https://recruit.navercorp.com/img/favicon/naver_favicon.ico" width="50"></a><br/>
+        <span><a href="https://www.naver.com/" id="logo">네이버</a></span><br/>
+        <form>
+            아이디 : <input type="text" value="id" class="box" readonly><br/>
+            비밀번호 : <input type="password" value="1234" class="box"><br/>
+            성별 : <input type="checkbox" checked>남성 <input type="checkbox">여성<br/>
+        </form>
+        
+    </div>
+</body>
+</html>
