@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS box 공부1</title>
+    <title>CSS box 공부1-block, inline 공부</title>
     <style>
         #default-div{
             background-color:yellowgreen;
@@ -14,6 +14,7 @@
         /*
         BLOCK Tag 는 width, height 태그O > 한 줄 통째로 차지하므로
         Inline Tag 는 width, height 태그X > 콘텐츠 길이만큼만 차지하므로
+            margin(바깥 여백), padding(안쪽 여백) 등의 크기 조절을 위한 속성을 가질 수 없음
         */
 
         span{
@@ -24,25 +25,18 @@
             background-color: red;
             width:100px;
             height:100px;
-            display:inline-block;  
-            /* display 속성 : 요소의 종류를 선택하는 속성
-                원래 Inline Tag를 BLOCK Tag처럼 보이게
-                원래 BLOCK Tag를 Inline Tag처럼 보이게 
-            */
         }
         
         #box2{
             background-color: orange;
             width:100px;
             height:100px;
-            display:inline-block;
         }
 
         #box3{
             background-color: yellow;
             width:100px;
             height:100px;
-            display:inline-block;
         }
         
         #box4{
@@ -55,41 +49,55 @@
             background-color: green;
             width:100px;
             height:100px;
-            display:inline-block;
         }
 
         #box6{
             background-color: skyblue;
             width:100px;
             height:100px;
-            display:inline-block;
-            display:inline-block;
         }
 
         #box7{
             background-color: blue;
             width:100px;
             height:100px;
-            display:inline-block;
         }
         
         #box8{
             background-color:purple;
             width:100px;
             height:100px;
-            display:inline-block;
         }
 
         #box9{
             background-color:brown;
             width:100px;
             height:100px;
-            display:inline-block;
         }
 
     </style>
 </head>
 <body>
+    <div id="default-div">
+        div는 기본적으로 BLOCK Tag. 한 줄을 통째로 차지한다.<br/>
+        BLOCK Tag, Inline Tag 둘 다 포함 가능하다.<br/>
+        자동으로 앞뒤 줄바꿈이 된다.<br/>
+        ex) h1~h6(글씨 크기), p(문단), ul(● 목록), ol(1. 2. 3. 목록)
+    </div>
+
+    <span id="dafault-span">
+        span은 기본적으로 Inline Tag. 콘텐츠 길이만큼 차지한다.<br/>
+        Inline Tag는 반드시 BLOCK Tag 안에 들어가 있어야 하고, BLOCK Tag를 담을 수 없다.<br/>
+        줄바꿈이 되지 않는다.<br/>
+        ex) img(이미지), input(텍스트 입력, 제출 버튼, 체크 박스 등등), a(링크)<br/>
+        <br/>
+        span에 display: inline-block 적용 시<br/>
+        inline 요소가 block 요소처럼 크기 조절 가능<br/>
+        margin, padding, width, height 등의 설정 가능O<br/>
+        하지만, 여전히 inline 요소에 block 요소를 집어 넣는 것은 불가능.
+    </span>
+    
+
     <div id="second-div">
         <div id="box1">
             1

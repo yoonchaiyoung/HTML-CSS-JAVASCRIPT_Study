@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS box 공부3-display속성 공부</title>
+    <style>
+        #default-div{
+            background-color:yellowgreen;
+            width:600px;
+            height:50px;
+            overflow-y: scroll;
+        }
+
+        span{
+            background-color:teal;
+        }
+
+        #box1{
+            background-color: red;
+            width:100px;
+            height:100px;
+            /* display: none;  -> BOX가 사라진다*/
+            /* display: inline; -> BOX가 글씨 '1'의 사이즈만 차지한다. inline 요소처럼 보임. */
+            /* display: block; 일반적인 BOX 모양 */
+            display: inline-block; /* BOX모양인데 inline.
+                                      즉, 겉모습은 BOX모양이지만 inline처럼 차지하는 부분만 차지하는 거라서
+                                      이전 여백 없이 딱 붙음.
+                                      다음 BOX도 display: inline-block; 속성을 넣어주면 한눈에 알아보기 쉽다. */
+            /* display 속성 : 요소의 종류를 선택하는 속성
+                원래 Inline Tag를 BLOCK Tag처럼 보이게
+                원래 BLOCK Tag를 Inline Tag처럼 보이게
+
+                display: inline ; default값. Inline Tag처럼 보이게 표시. 앞뒤로 줄바꿈되지 X
+                display: block ; BLOCK Tag처럼 보이게 표시. 앞뒤로 줄바꿈 O
+                display: none ; 박스가 생성되지 X, 공간 차지 X -> 없어짐..
+                display: inline-box ; Inline 인데도 내부는 BLOCK 처럼 표시. 즉, 박스 모양이 Inline처럼 옆으로 늘어섬.
+            
+            
+                근데 요즘엔 display: inline-block; 방법 잘 사용하지 않고,
+                flex 방법을 사용한다.*/
+        }
+        
+        #box2{
+            background-color: orange;
+            width:100px;
+            height:100px;
+            display: inline-block;
+        }
+
+        #box3{
+            background-color: yellow;
+            width:100px;
+            height:100px;
+            display: inline;
+        }
+        
+        #box4{
+            background-color: greenyellow;
+            width:100px;
+            height:100px;
+            display: none;
+        }
+        
+        #box5{
+            background-color: green;
+            width:100px;
+            height:100px;
+            display: inline;
+        }
+
+        #box6{
+            background-color: skyblue;
+            width:100px;
+            height:100px;
+            display: inline-block;
+        }
+
+        #box7{
+            background-color: blue;
+            width:100px;
+            height:100px;
+            display: block;
+        }
+        
+        #box8{
+            background-color:purple;
+            width:100px;
+            height:100px;
+            display: inline-block;  /* 이 때, 7번 BOX바로 뒤에 붙지 않는 이유?
+                                        7번 BOX는 block이라서 화면 한 줄을 전체 다 차지한다.
+                                        그래서 box8이 inline-block으로 이전 여백 없이 바로 붙는 걸로 하더라도
+                                        다음 줄에 올 수 밖에 없는 것이다. */
+        }
+
+        #box9{
+            background-color:brown;
+            width:100px;
+            height:100px;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="second-div">
+        <div id="box1">
+            1
+        </div>
+        <div id="box2">
+            2
+        </div>
+        <div id="box3">
+            3
+        </div>
+        <div id="box4">
+            4
+        </div>
+        <div id="box5">
+            5
+        </div>
+        <div id="box6">
+            6
+        </div>
+        <div id="box7">
+            7
+        </div>
+        <div id="box8">
+            8
+        </div>
+        <div id="box9">
+            9
+        </div>
+    </div>
+</body>
+</html>

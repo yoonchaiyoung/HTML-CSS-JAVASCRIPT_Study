@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS box 공부4-flex속성 공부</title>
+    <style>
+        #default-div{
+            background-color:yellowgreen;
+            width:600px;
+            height:50px;
+            overflow-y: scroll;
+        }
+
+        span{
+            background-color:teal;
+        }
+
+        #box1{
+            background-color: red;
+            width:100px;
+            height:100px;
+        }
+        
+        #box2{
+            background-color: orange;
+            width:100px;
+            height:100px;
+            
+        }
+
+        #box3{
+            background-color: yellow;
+            width:100px;
+            height:100px;
+        }
+        
+        #box4{
+            background-color: greenyellow;
+            width:100px;
+            height:100px;
+        }
+        
+        #box5{
+            background-color: green;
+            width:100px;
+            height:100px;
+        }
+
+        #box6{
+            background-color: skyblue;
+            width:100px;
+            height:100px;
+        }
+
+        #box7{
+            background-color: blue;
+            width:100px;
+            height:100px;
+        }
+        
+        #box8{
+            background-color:purple;
+            width:100px;
+            height:100px;
+        }
+
+        #box9{
+            background-color:brown;
+            width:100px;
+            height:100px;
+        }
+
+        /*
+        위의 box들은 건드리지 않고 box를 모두 포함하는 div의 id인 flex-container를 이용한다.
+        flex-container를 id로 갖는 태그의 CSS를 변경해주면
+        모든 box의 스타일이 변경된다. */
+        #flex-container{
+            height: 500px;
+            background-color: black;  /* 검정 도화지 위에서 색종이들이 움직이는 것처럼 배경을 검은색으로 해보자. */
+            display: flex;  /* 안쪽의 배치를 유연하게 만들어준다. */
+            /* justify-content: flex-start; -> 왼쪽 정렬 */
+            /* justify-content: flex-end; -> 오른쪽 정렬 */
+            /* justify-content: center; -> 가운데 정렬 */
+            /* justify-content: space-between; -> 시작점은 왼쪽 맨 끝, 끝점은 오른쪽 맨 끝에 놓고,
+                                                중간 간격 일정하게 */
+            justify-content: space-around; /* 양끝 간격도 포함해서 양쪽 간격이 일정하게 */
+            align-items: center;
+            /* flex-direction: row;
+            flex-direction: row-reverse; */
+            flex-direction: column;
+            /* flex-direction: column-reverse; */
+
+            /*
+            justify-content : 주축 정렬 방식
+            align-items : 교차축 정렬 방식
+            flex-direction: column 주축 방향 설정
+            */
+        }
+
+
+    </style>
+</head>
+<body>
+    <p>
+        <h1>CSS Flex(Flexible Box) 설명</h1><br/>
+        <a href="https://heropy.blog/2018/11/24/css-flexible-box/">참고</a><br/>
+        대부분 사이트 : 레이아웃 수직 구성. 위~아래로 스크롤하여 사용<br/>
+        레이아웃이 기본적으로 위~아래로 수직적으로 쌓이기 때문에 쉽게 만들 수 있다.<br/>
+        하지만 수평 구조. 왼쪽~오른쪽으로의 레이아웃은 만들기가 어렵다.<br/>
+        하지만 flex를 이용하면 만들기가 쉽다.<br/>
+        flex는 요소의 크기가 불분명하거나 동적인 경우에도 각 요소를 정렬할 수 있는 효율적인 방법을 제공한다.<br/>
+        <h2>flex의 개념</h2><br/>
+        <img src="https://heropy.blog/images/screenshot/css-flexible-box/flex-base.jpg", width="600">
+        <ul>
+            <li>
+                container : items를 감싸는 부모 요소 -> 사용 가능 속성 : display, flex-flow, justify-content
+            </li>
+            <li>
+                items : container에 감싸져 있는 자식 요소 -> 사용 가능 속성 : order, flex, align-self
+            </li>
+        </ul>
+        <h2>주축(main-axis), 교차축(cross-axis)의 개념</h2>
+        주축 : items이 쌓이는 방향 -> justify-content<br/>
+        교차축 : 주축과 수직인 방향 -> align-items<br/>
+        즉, 방향(수평, 수직)에 따라 주축, 교차축이 달라진다
+    </p>
+    <div id="flex-container">
+        <div id="box1">
+            1
+        </div>
+        <div id="box2">
+            2
+        </div>
+        <div id="box3">
+            3
+        </div>
+        <div id="box4">
+            4
+        </div>
+        <div id="box5">
+            5
+        </div>
+        <div id="box6">
+            6
+        </div>
+        <div id="box7">
+            7
+        </div>
+        <div id="box8">
+            8
+        </div>
+        <div id="box9">
+            9
+        </div>
+    </div>
+    
+</body>
+</html>

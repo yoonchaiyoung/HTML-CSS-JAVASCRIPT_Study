@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS box 공부1</title>
+    <title>CSS box 공부2-float속성 공부</title>
     <style>
         #default-div{
             background-color:yellowgreen;
@@ -11,10 +11,6 @@
             height:50px;
             overflow-y: scroll;
         }
-        /*
-        BLOCK Tag 는 width, height 태그O > 한 줄 통째로 차지하므로
-        Inline Tag 는 width, height 태그X > 콘텐츠 길이만큼만 차지하므로
-        */
 
         span{
             background-color:teal;
@@ -24,74 +20,86 @@
             background-color: red;
             width:100px;
             height:100px;
+            display: inline-block;
+            /*float:none;  /* default값. 띄우지 X*/
+            /*float:left;  /* 왼쪽에 띄움.*/
+            /*float:right;  /* 오른쪽에 띄움*/
+            /*float:initial;  /* 기본값으로 설정*/
+            /*float:inherit;  /* 부모 요소로부터 상속 */
+            /* 참고 : https://developer.mozilla.org/ko/docs/Web/CSS/float */
         }
         
         #box2{
             background-color: orange;
             width:100px;
             height:100px;
+            display: inline-block;
+            float: left;
         }
 
         #box3{
             background-color: yellow;
             width:100px;
             height:100px;
+            display: inline;
         }
         
         #box4{
             background-color: greenyellow;
             width:100px;
             height:100px;
+            display: none;
         }
         
         #box5{
             background-color: green;
             width:100px;
             height:100px;
+            display: inline;
         }
 
         #box6{
             background-color: skyblue;
             width:100px;
             height:100px;
+            display: inline-block;
         }
 
         #box7{
             background-color: blue;
             width:100px;
             height:100px;
+            display: block;
+            float: left; /*-> 문제점 발생.
+                               BLOCK 이라서 한 줄을 다 차지하는 것인데도 왼쪽정렬로
+                               붙어버리니까 오른쪽에 다른 요소들이 나란히 일자로 붙음. */
+            clear: left;  /* float: left;  를 무효화시켜줌.
+            clear: right;    float: right; 를 무효화시켜줌.
+            clear: both;     float: both;  를 무효화시켜줌
+            
+            이렇게 float를 다시 무효화시켜주기 위해 clear 속성을 또 사용해줘야 한다. 
+            그래서 정적인 웹 페이지를 만들 때에는 float 속성을 사용하는 것은 별로다.
+            그래서 display: inline-block 방법을 사용한다.*/
         }
         
         #box8{
+            display: inline-block;
             background-color:purple;
             width:100px;
             height:100px;
+            display: inline-block;
         }
 
         #box9{
             background-color:brown;
             width:100px;
             height:100px;
+            display: inline-block;
         }
 
     </style>
 </head>
 <body>
-    <div id="default-div">
-        div는 기본적으로 BLOCK Tag. 한 줄을 통째로 차지한다.<br/>
-        BLOCK Tag, Inline Tag 둘 다 포함 가능하다.<br/>
-        자동으로 앞뒤 줄바꿈이 된다.<br/>
-        ex) h1~h6(글씨 크기), p(문단), ul(● 목록), ol(1. 2. 3. 목록)
-    </div>
-
-    <span id="dafault-span">
-        span은 기본적으로 Inline Tag. 콘텐츠 길이만큼 차지한다.<br/>
-        Inline Tag는 반드시 BLOCK Tag 안에 들어가 있어야 하고, BLOCK Tag를 담을 수 없다.<br/>
-        줄바꿈이 되지 않는다.<br/>
-        ex) img(이미지), input(텍스트 입력, 제출 버튼, 체크 박스 등등), a(링크)
-    </span>
-    
-
     <div id="second-div">
         <div id="box1">
             1

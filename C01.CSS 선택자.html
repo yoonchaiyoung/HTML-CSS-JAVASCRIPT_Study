@@ -58,6 +58,8 @@
         }  /* img 바로 뒤의 동생이 span 이라서 조건에 맞지 않아서 아무 변화 없음 */
         
         /* input 속성 선택자
+        input:read-only : input 태그의 속성값이 readonly인 요소만 선택
+        input:read-write : input 태그의 속성값이 readonly가 아닌 요소 선택
         */
         input:read-only{
             color:orchid;
@@ -92,6 +94,9 @@
         form *:first-child{
             font-style:italic;
         }
+        /* 
+        input:checked ; checkbox, radio button에서 많이 활용됨
+        */
         input:checked{
             width:100px;
             height:100px;
