@@ -1,3 +1,3 @@
-# HTML-CSS_Study
+# HTML-CSS-JAVASCRIPT_Study
 
-HTML, CSS 개인 공부용 repository 입니다.
+HTML, CSS, JAVASCRIPT 개인 공부용 repository 입니다.

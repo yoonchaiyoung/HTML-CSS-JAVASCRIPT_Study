@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="dan" value="몇 단을 할까요? 숫자만 입력해주세요.">
+    <button id="btn"> 클릭 </button>
+    
+    <script>
+        const btn = document.getElementById("btn");
+        const dan = document.getElementById("dan");
+        
+        btn.addEventListener("click", () => {
+            const dan_num = parseInt(dan.value);
+            // input 으로 들어온 값은 datatype : 문자열 -> 숫자로 변형시켜줘야 한다.
+            for(let i=1; i<10; i++){
+                console.log(dan_num, "x", i, "=", dan_num * i);
+            }
+        });
+    </script>
+</body>
+</html>

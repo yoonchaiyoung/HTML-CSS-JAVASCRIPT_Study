@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리2 만들기</title>
+
+    <script>
+        // 갤러리에 넣을 이미지 링크들
+        const imageList = [
+        "https://lh3.googleusercontent.com/proxy/QyQqPpU6TG43003V9ybf_36u8Wkf_pN1FS71Q59ePDKPO0SLVRcZlfWUN4yRlrVgrKpdqTFluXtqZ0xuOYJC9DOk9bovlH_ofUSi1Eb6fPTBDSsamEdnTrMaFXDdG-Lj7xtyQXblFtNmBq7yY1iuMkhEHBI_YjVgsrIQJ2zXZiAkU-fYxgGAdc96lvtlPIm5RkPK1GTN9U6dMve6ENhxI5QcfjcqC9MhAMVpsSEWW2DGOGrvDnO0G9IQowTroF-YtDK4mW4R-GRpO4TIwf1-Xo93ezDacqU5GoOwK7Z8X9FP3NaT7GHMx8D7qeo_Udq4HXIXfhI",
+        "https://thumbnail.10x10.co.kr/webimage/image/basic600/262/B002626948.jpg?cmd=thumb&w=500&h=500&fit=true&ws=false",
+        "https://m.kirakiratomo.com/web/product/big/20191209/7e4c551dfc799d2dbc3371aebe764d13.png",
+        "https://lh3.googleusercontent.com/proxy/1ggMBBSKqNjhw1nbxneHtQG33vgSZqPQeO-zweJZQuOqblrSS83afmGvC4s81sRJSiC8CZN-nO5hBqPUQzP460ANS0uWD8fyY4jwtnIcNSC0V-lbXGHp",
+        "https://dimg.donga.com/wps/NEWS/IMAGE/2020/03/24/100332619.1.jpg",
+        "https://lh3.googleusercontent.com/proxy/HjFMLAfO6mMMaDounqtJMpfoTHpnYE7plRGa8ntNhQZI1E4mWNv8-Bha0jrVDhb7bvYqTOOslpFWv8UR0E565sOa1JoJ96WDauVZlCLamnEA26DAolR3vO9Jwbx_3oFKp2PnwTeI1KMGhp6PSDZTOZPilgBWNQ",
+        "https://i.pinimg.com/originals/e5/64/d6/e564d613befe30dfcef2d22a4498fc70.png"
+        ];
+    </script>
+</head>
+<body>
+    <img src="#" id="gallery" width="300" height="300"/><br>
+    <button id="btn-left"> < </button>
+    <button id="btn-right"> > </button>
+    
+    <script>
+        const gallery = document.getElementById("gallery");
+        let now_location = parseInt(0);
+        gallery.src = imageList[now_location];
+
+        const btn_left = document.getElementById("btn-left");
+        btn_left.addEventListener("click", () => {
+            gallery.src = imageList[Math.max(0, now_location-1)];
+            now_location = Math.max(0, now_location-1);
+        });
+        
+        const btn_right = document.getElementById("btn-right");
+        btn_right.addEventListener("click", () => {
+            gallery.src = imageList[Math.min(imageList.length-1, now_location+1)];
+            now_location = Math.min(imageList.length=1, now_location+1);
+        });
+    </script>
+</body>
+</html>

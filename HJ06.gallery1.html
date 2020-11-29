@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리1 만들기</title>
+
+    <script>
+        const imageList = [
+        "https://lh3.googleusercontent.com/proxy/GEh6g1gleMtGKfTrshm9dg5xp3dpQ0gBQiqhi8uM4mfXSl4Odfj8ZPQ03U19yNvRAPsEhWl4oolT0jFeHkfj0F2fU2DX6Fi4yOy55IJJWupkPui4rIzEsjUvlR4eWARTu6LlwqZwgMX3UepjaUysiyyj2u2I5DubI76X49ewlTrBHVufUlodURWwF_mjPRR9b2JlqdQRFbI1HRVQnW1D8zagLI3gdARdtU8la3l__5a3wux4v-stBq3b_pdghpu8-HGlRXMMA6OEHRUFc9wD6_lsrMv8s08GHd0P4VpRw8uEeCk6QUakw98Bu25kDlXW1hncDvo",
+        "https://thumbnail.10x10.co.kr/webimage/image/basic600/262/B002626948.jpg?cmd=thumb&w=500&h=500&fit=true&ws=false",
+        "https://m.kirakiratomo.com/web/product/big/20191209/7e4c551dfc799d2dbc3371aebe764d13.png",
+        "https://lh3.googleusercontent.com/proxy/1ggMBBSKqNjhw1nbxneHtQG33vgSZqPQeO-zweJZQuOqblrSS83afmGvC4s81sRJSiC8CZN-nO5hBqPUQzP460ANS0uWD8fyY4jwtnIcNSC0V-lbXGHp"
+        ]
+    </script>
+</head>
+<body>
+    <!-- 이미지 링크 javascript 배열 -> head 부분 -->
+    <img src="#" id="gallery" />
+    <script>
+        // 이미지 하나씩 불러오는 코드 -> body 부분
+        const gallery = document.getElementById("gallery");
+        gallery.src = imageList[0];
+        // gallery.src = imageList[1];
+        // gallery.src = imageList[2];
+        // gallery.src = imageList[3];
+    </script>
+</body>
+</html>
