@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipt Event 공부</title>
+</head>
+<body>
+    <button id="btn">클릭</button>
+    <p>
+        <h1>javascript의 event란?</h1><br/>
+        사용자와 javascript의 상호작용<br/>
+        ~할 때 ~하겠다.<br/>
+        <h2>Event 종류</h2><br/>
+        <li>화면 클릭</li>
+        <li>스크롤</li>
+        <li>브라우저 화면 크기 조절 등등</li>
+    </p>
+    <script>
+        const btn = document.getElementById("btn");
+        // btn : event의 target이 된다.
+        // event가 일어나야할 객체
+        
+        btn.addEventListener("click", () => {
+        // addEventListener() 메소드 : 지정한 event가 target에 전달될 때마다
+        //      여기서 target : btn
+        // 호출할 **함수**를 설정
+
+        // 참고 : https://developer.mozilla.org/ko/docs/Web/API/EventTarget/addEventListener
+        // target.addEventListener(type, listener[, options]); 형식처럼 생겼음.
+        // type : 반응할 Event 유형
+        // listener : 지정된 type의 Event가 발생했을 때 알림을 받는 객체.
+        // options : eventlistener의 특성 지정하는 옵션
+        alert("버튼이 클릭되었습니다.");
+        });
+    </script>
+</body>
+</html>

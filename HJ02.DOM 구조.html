@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM구조</title>
+    
+    <script>
+        console.log("head 시작 부분")
+        // const headTempInput = document.getElementById("temp-input");
+        // console.log("head에서 가져온 form의 글씨 :", headTempInput.value);
+        // 코드해석) document : 문서. body 부분의 객체.
+        //          getElementById : id를 통해서 elment(=document=body)의 정보를 가져오겠다.
+        
+        // 에러뜬다.
+        // 이유?
+        // 아직 head부분이라서 body의 DOM 구조가 그려지지 않아서 데이터를 가져올 수 X.
+        
+    </script>
+</head>
+<body>
+    <input type="text" id="temp-input" value="샘플 텍스트">
+    <script>
+        const bodyTempInput = document.getElementById("temp-input");
+        console.log("body에서 가져온 form의 글씨 : ", bodyTempInput.value);  // console 창에 출력 
+        // body 부분에서 DOM 구조가 다 그려진 후
+        // body부분의 최하단 부분에서 JavaScript의 스크립트가 실행되기 때문에
+        // 데이터를 가져올 수 O
+        // 보통 body에 JavaScript 코드를 놓는다면 body 부분의 최하단에 놓는다.
+    </script>
+</body>
+</html>
+
+<!-- console.log() 확인 방법?
+      -> 크롬 브라우저 -> F12 버튼 눌러서 console 탭 확인 -->
