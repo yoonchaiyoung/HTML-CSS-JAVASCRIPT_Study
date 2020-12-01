@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "nodemon JS01.variable.js"
+    "start" : "nodemon JS07.동기_비동기_입출력_방식.js"
   },
   "repository": {
     "type": "git",
