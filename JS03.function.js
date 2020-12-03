@@ -5,6 +5,8 @@
 
 // 함수를 실행시킬 때에는 func1(); 처럼 뒤에 괄호를 붙여줘야 한다.
 // 그냥 func1; 이라고 하면 변수로 인식한다.
+
+// 1. 함수 지정후 값 호출
 function foo(a, b) {}
 // 이런 형태
 
@@ -26,6 +28,7 @@ var result3 = foo1("hello", 30);
 console.log(result3);
 // 문자열과 숫자형이 같이 있으면 나란히 붙인다.
 
+// 2. 변수 자체에 함수 생성
 // 함수를 변수에 넣는 형태도 선언이 가능하다.
 const foo2 = function (a, b) {
   return a + b;
