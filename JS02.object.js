@@ -95,3 +95,7 @@ console.log(typeof undefined); // undefined
 
 // null : 변수O, 변수가 참조하고 있는 객체X
 // undefined : 변수 자체가 X or 변수가 초기화가 되지 않은 경우
+
+// (), {}의 차이?
+// () : array -> indexing 할 때 숫자로 함
+// {} : object -> indexing 할 때 key 값으로 함
